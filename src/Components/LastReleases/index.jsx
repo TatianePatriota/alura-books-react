@@ -1,21 +1,12 @@
 import { books } from "./lastReleases.js";
 import styled from "styled-components";
+import StyledTitle from "../Title";
 
 const StyledLastReleases = styled.section`
   background-color: #ebecee;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-`;
-
-const StyledTitle = styled.h2`
-  width: 100%;
-  padding: 30px 0;
-  background-color: #fff;
-  color: #eb9b00;
-  font-size: 36px;
-  text-align: center;
-  margin: 0;
 `;
 
 const StyledRealeases = styled.div`
@@ -29,7 +20,9 @@ const StyledRealeases = styled.div`
 function LastReleases() {
   return (
     <StyledLastReleases>
-      <StyledTitle>ÚLTIMOS LANÇAMENTOS</StyledTitle>
+      <StyledTitle cor="#eb9b00" tamanhoFonte="36px">
+        ÚLTIMOS LANÇAMENTOS
+      </StyledTitle>
       <StyledRealeases>
         {books.map((book) => (
           <img src={book.src} alt={book.nome} />
