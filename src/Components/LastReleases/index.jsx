@@ -1,6 +1,8 @@
 import { books } from "./lastReleases.js";
 import styled from "styled-components";
 import StyledTitle from "../Title";
+import RecommendedBooks from "../RecommendedBooks";
+import bookImage from "../../assets/images/livro2.png";
 
 const StyledLastReleases = styled.section`
   background-color: #ebecee;
@@ -28,6 +30,12 @@ function LastReleases() {
           <img src={book.src} alt={book.nome} />
         ))}
       </StyledRealeases>
+      <RecommendedBooks
+        title="Talvez você se interesse por:"
+        subtitle="Angular 11"
+        description="Construindo uma aplicação com a plataforma Google"
+        img={bookImage}
+      />
     </StyledLastReleases>
   );
 }
